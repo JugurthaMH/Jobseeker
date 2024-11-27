@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Style global */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #6aadfa;
+    text-align: center;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////// En-tête du site ////////////////////////////////////////////////*/
+
+/* Style pour le conteneur de l'image */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: flex-start; /* Aligne l'image en haut */
+}
+
+/* Style pour le logo du site */
+.centered-image {
+    width: 25%; /* Largeur de l'image */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Applique une transition douce lors du changement de taille */
+}
+
+/* Effet au survol de l'image */
+.centered-image:hover {
+    transform: scale(1.1); /* Agrandit l'image à 110% de sa taille originale */
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////// Navigation ////////////////////////////////////////////////*/
+
+/* Place les fonctionalités à l'horizontale*/
+nav {
+    display: flex;
+    justify-content: space-between; /* Place les éléments aux extrémités */
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px; /* Espace des bords */
+}
+
+nav div {
+    flex: 1; /* Place l'élément div tout à gauche */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Carte utilisateur */
+.box_profile {
+    display: inline-flex; /* Pour aligner les éléments côte à côte */
+    max-width: 30%;
+    background: #fdfdfd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1000; /* Assure que la carte apparaît au-dessus des autres éléments */
+}
+
+.box_profile #activeAccount {
+    margin-right: 5px; /* Espace minimal entre "Compte actif" et le prénom/nom */
+}
+
+.btn {
+    padding: 8px 12px;
+    background-color: #6aadfa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #4f95e0;
+}
+
+#themeToggle {
+    border: none; /* Enlève la bordure du bouton */
+    background: transparent; /* Enlève le fond du bouton */
+    cursor: pointer; /* Change le curseur lorsque l'on passe sur le bouton */
+}
+
+#themeIcon {
+    width: 40px; /* Taille de l'icône (largeur) */
+    height: 40px; /* Taille de l'icône (hauteur) */
+    object-fit: contain; /* Permet à l'image de conserver ses proportions */
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*////////////////////////////////////////// Musique ///////////////////////////////////////////////////*/
+/* Style pour le bouton musique*/
+.circular-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-btn-container {
+    position: absolute;
+    left: 3%;
+    top: 110%;
+    transform: translate(-50%, -50%);
+}
+
+.circular-btn:hover {
+    background-color: #1d2130;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////// Contenu principal ///////////////////////////////////////////////*/
+
+.box_titrePoste{
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    font-weight: bold; /* Met le texte en gras */
+    font-size: 30px;
+    text-align: center;
+}
+
+.centre{
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+/* Conteneur principal */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1000px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+/* Box gauche (détails de l'offre) */
+.box_left {
+    width: 45%;
+    padding: 15px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Box droite (formulaire de candidature) */
+.box_right {
+    width: 45%;
+    padding: 15px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #333;
+    text-decoration: underline;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// Mode Sombre //////////////////////////////////////////////////////*/
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+/* Style pour la box profile en mode sombre */
+body.dark-mode .box_profile, body.dark-mode .box_left,body.dark-mode .box_right,body.dark-mode .box_titrePoste {
+    background: #1e1e1e;
+    color: #f4f4f4;
+}
+
+body.dark-mode .box,body.dark-mode h3 {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .main-container {
+    background-color: #292828;
+    color: #e0e0e0;
+}
+
+/* Pied de page en mode sombre */
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////// FOOTER ////////////////////////////////////////////*/
+/* Pied de page */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: relative; /* Retire la fixation en bas de la page */
+    bottom: 0;
+    clear: both;
+    margin-top: 20px; /* Ajoute un peu d'espace au-dessus */
+}

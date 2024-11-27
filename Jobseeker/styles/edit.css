@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Style global */
+body {
+    background-color: #f4f4f4;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// En-tête du site ///////////////////////////////////////////////////////*/
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+/* Style pour le header du haut de la page */
+.special_header{
+    background-color: #6aadfa;
+    text-align: center;
+}
+
+/* Style pour le conteneur de l'image */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: flex-start; /* Aligne l'image en haut */
+}
+
+/* Style pour le logo du site */
+.centered-image {
+    width: 25%; /* Largeur de l'image */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Applique une transition douce lors du changement de taille */
+}
+
+/* Effet au survol de l'image */
+.centered-image:hover {
+    transform: scale(1.1); /* Agrandit l'image à 120% de sa taille originale */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*///////////////////////////////////////////////////// Navigation ///////////////////////////////////////////////////////*/
+
+/* Style pour le bouton déconnexion et enregistrer*/
+.btn {
+    padding: 8px 12px;
+    background-color: #6aadfa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #4f95e0;
+}
+
+/* Place les fonctionalités à l'horizontale*/
+nav {
+    display: flex;
+    justify-content: space-between; /* Place les éléments aux extrémités */
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px; /* Espace des bords */
+}
+
+nav div {
+    flex: 1; /* Place l'élément div tout à gauche */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Carte utilisateur */
+.box_profile {
+    display: inline-flex; /* Pour aligner les éléments côte à côte */
+    max-width: 30%;
+    background: #fdfdfd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1000; /* Assure que la carte apparaît au-dessus des autres éléments */
+}
+
+.box_profile #activeAccount {
+    margin-right: 5px; /* Espace minimal entre "Compte actif" et le prénom/nom */
+}
+
+#themeToggle {
+    border: none; /* Enlève la bordure du bouton */
+    background: transparent; /* Enlève le fond du bouton */
+    cursor: pointer; /* Change le curseur lorsque l'on passe sur le bouton */
+}
+
+#themeIcon {
+    width: 40px; /* Taille de l'icône (largeur) */
+    height: 40px; /* Taille de l'icône (hauteur) */
+    object-fit: contain; /* Permet à l'image de conserver ses proportions */
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// Container ///////////////////////////////////////////////////////*/
+
+/* Style pour la box Modifier le profil */
+.box{
+    background: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.form-box{
+    width: 450px;
+    margin: 0px 10px;
+}
+
+.form-box header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 10px;
+}
+
+.form-box form .field{
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.form-box .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// Box ERREUR ///////////////////////////////////////////////////////*/
+
+/* Styles de la carte d'erreur */
+.box_error {
+    position: fixed; /* Position fixe par rapport à la fenêtre du navigateur */
+    bottom: 60px; /* Distance du bas de la page */
+    right: 20px;  /* Distance du côté droit de la page */
+    width: 300px; /* Largeur de la carte */
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+    z-index: 1000; /* Assure que la carte apparaît au-dessus des autres éléments */
+}
+
+/* Titre du message */
+.box_error header {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+/* Contenu du message */
+.box_error .content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// Mode Sombre //////////////////////////////////////////////////////*/
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+/* Style pour la box profile en mode sombre */
+body.dark-mode .box_profile {
+    background: #1e1e1e;
+    color: #f4f4f4;
+    box-shadow: 0 0 128px 0 rgba(255, 255, 255, 0.1), 0 32px 64px -48px rgba(255, 255, 255, 0.5);
+}
+
+body.dark-mode .box {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .box_error, body.dark-mode .box_error header, body.dark-mode .box_error .content{
+    background: #1e1e1e;
+    color: #f4f4f4;
+}
+
+/* Pied de page en mode sombre */
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// Bouton Supprimer //////////////////////////////////////////////////////*/
+
+.btn_supprimer{
+    position: fixed; /* Position fixe par rapport à la fenêtre du navigateur */
+    bottom: 80px; /* Distance du bas de la page */
+    left: 20px;  /* Distance du côté droit de la page */
+    background: rgb(196, 18, 18);
+    height: 35px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
+}
+
+.btn_supprimer:hover{
+    opacity: 0.8;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// FOOTER ///////////////////////////////////////////////////////*/
+
+/* Style pour la banderole de copyright */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

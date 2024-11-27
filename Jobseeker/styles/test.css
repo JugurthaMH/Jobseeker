@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Style global */
+body,html {
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #6aadfa;
+    text-align: center;
+}
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Place les fonctionalités à l'horizontale*/
+nav {
+    display: flex;
+    justify-content: space-between; /* Place les éléments aux extrémités */
+    align-items: center;
+    margin: 20px 0;
+    padding: 0 20px; /* Espace des bords */
+}
+
+nav div {
+    flex: 1; /* Place l'élément div tout à gauche */
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Carte utilisateur */
+.box_profile {
+    display: inline-flex; /* Pour aligner les éléments côte à côte */
+    max-width: 30%;
+    background: #fdfdfd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 1000; /* Assure que la carte apparaît au-dessus des autres éléments */
+}
+
+.box_profile #activeAccount {
+    margin-right: 5px; /* Espace minimal entre "Compte actif" et le prénom/nom */
+}
+
+#themeToggle {
+    border: none; /* Enlève la bordure du bouton */
+    background: transparent; /* Enlève le fond du bouton */
+    cursor: pointer; /* Change le curseur lorsque l'on passe sur le bouton */
+}
+
+#themeIcon {
+    width: 40px; /* Taille de l'icône (largeur) */
+    height: 40px; /* Taille de l'icône (hauteur) */
+    object-fit: contain; /* Permet à l'image de conserver ses proportions */
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Style pour le conteneur de l'image */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: flex-start; /* Aligne l'image en haut */
+}
+
+/* Style pour le logo du site */
+.centered-image {
+    width: 25%; /* Largeur de l'image */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Applique une transition douce lors du changement de taille */
+}
+
+/* Effet au survol de l'image */
+.centered-image:hover {
+    transform: scale(1.1); /* Agrandit l'image à 110% de sa taille originale */
+}
+/*///////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*//////////////////////////////////////////// CONTENU PRINCIPAL /////////////////////////////////////////////////*/
+.box_titrePoste{
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    font-weight: bold; /* Met le texte en gras */
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Style de la box principale */
+.box_Poste {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+
+.box_Poste:hover {
+    transform: scale(1.05); /* Agrandit l'image de 5% */
+}
+
+/* Style de l'image des icones de poste d'alternances*/
+.image-container2 img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Style pour la zone de texte */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+/* Texte en haut (petit) */
+.petit-texte {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Texte en bas (gros) */
+.large-texte {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.postule {
+    color: green; 
+    font-weight: bold;
+}
+
+.btn {
+    padding: 8px 12px;
+    background-color: #6aadfa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn:hover {
+    background-color: #4f95e0;
+}
+
+.section {
+    padding-bottom: 50px;
+    width: 70%; /* Ajustez le pourcentage selon la largeur souhaitée */
+    max-width: 1200px; /* Limite la largeur, optionnel */
+    margin: 0 auto; /* Centre la section */
+}
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*///////////////////////////////////////////////////// Box ERREUR ///////////////////////////////////////////////////////*/
+
+/* Styles de la carte d'erreur */
+.box_error {
+    position: fixed; /* Position fixe par rapport à la fenêtre du navigateur */
+    bottom: 60px; /* Distance du bas de la page */
+    right: 20px;  /* Distance du côté droit de la page */
+    width: 300px; /* Largeur de la carte */
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1), 0 32px 64px -48px rgba(0,0,0,0.5);
+    z-index: 1000; /* Assure que la carte apparaît au-dessus des autres éléments */
+}
+
+/* Titre du message */
+.box_error header {
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    background: #fdfdfd;
+}
+
+/* Contenu du message */
+.box_error .content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*////////////////////////////////////////// MODE SOMBRE ///////////////////////////////////////////////////*/
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+/* Style pour la box profile en mode sombre */
+body.dark-mode .box_profile {
+    background: #1e1e1e;
+    color: #f4f4f4;
+    box-shadow: 0 0 128px 0 rgba(255, 255, 255, 0.1), 0 32px 64px -48px rgba(255, 255, 255, 0.5);
+}
+
+/* Style pour la box de titre de poste en mode sombre */
+body.dark-mode .box_titrePoste {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+/* Style pour la box principale des postes */
+body.dark-mode .box_Poste {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .box_error, body.dark-mode .box_error header, body.dark-mode .box_error .content {
+    background: #221f1f;
+    color: #f4f4f4;
+}
+
+body.dark-mode .box_Poste:hover {
+    transform: scale(1.05);
+}
+
+/* Texte en haut (petit) */
+body.dark-mode .petit-texte {
+    font-size: 14px;
+    color: #d8d2d2;
+    margin-bottom: 5px;
+}
+
+/* Texte en bas (gros) */
+body.dark-mode .large-texte {
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Style des boutons en mode sombre */
+body.dark-mode .btn {
+    background-color: #4f95e0;
+    color: #fff;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #377bb5;
+}
+
+/* Pied de page en mode sombre */
+body.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+/*/////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*//////////////////////////////////////////// FOOTER //////////////////////////////////////////////////////////*/
+/* Pied de page */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////////////*/
