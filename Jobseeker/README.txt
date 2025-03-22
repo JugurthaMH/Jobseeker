@@ -25,4 +25,4 @@ Suite à cela, aller sur votre navigateur et lancer "localhost/Jobseeker".
 Je vous souhaite une bonne découverte du site web. J'espère que vous l'apprécierez autant que j'ai passé d'heures dessus.
 
 --------------- Auteurs :
-Jugurtha Menasria
+Jugurtha M.
